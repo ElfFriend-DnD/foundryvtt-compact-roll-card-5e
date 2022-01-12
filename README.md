@@ -9,39 +9,29 @@
 [![ko-fi](https://img.shields.io/badge/-buy%20me%20a%20coke-%23FF5E5B)](https://ko-fi.com/elffriend)
 [![patreon](https://img.shields.io/badge/-patreon-%23FF424D)](https://www.patreon.com/ElfFriend_DnD)
 
-This module's goal is to allow GMs to disable/delete active effects from the token HUD.
+This module aims to make the core 5e (and MRE) chat cards more compact by changing the roll card layout as well as collapsing related cards together.
 
+The module is almost entirely CSS, with one JS operation that adds a css class to chatcards during the renderChatCard hook.
 ## Features
 
-When a token has a temporary active effect active, display that active effect icon in the Status Effects HUD element.
+When two chat cards occur almost simultaneously and both originate from the same actor, collapse them together and hide the actor's name in the header of the collapsed card.
 
-Interacting with that effect icon will do one of the following by default:
-- If the effect has a `statusId`, it was meant to be short-lived or re-created frequently, delete the effect.
-- If the effect has no `statusId`, disable it.
+Additionally, change the default roll card layout to make better use of the horizontal room generally available.
 
-Examples:
-1. Akra casts "Bless" and the GM applies the "Bless" effect from the card output by [Item Effects to Chat D&D5e](https://github.com/ElfFriend-DnD/foundryvtt-item-effects-to-chat-5e) to Akra's targets: Akra, Morthos, and Randall.
-2. The GM right clicks on one of the Tokens that isn't Akra and opens the status effect menu.
-3. The "Bless" icon is present in addition to other options here.
-4. The GM clicks on the "Bless" icon, and the "Bless" effect on the token's actor is deleted because the effect did not originate from that token's actor.
-
-### Setting: "Always delete instead of disable"
-Having this setting toggled on will always delete the actor's Active Effect instead of sometimes disabling it. This is most useful for games using DAE/MIDI/Times Up to manage their active effect applications.
-
-https://user-images.githubusercontent.com/7644614/148661276-3160fc8f-a2e0-4da8-9733-b28f0a3c6af9.mp4
+![Image demonstrating the changes to chat cards](https://cdn.discordapp.com/attachments/734095524822777976/930687880387506246/unknown.png)
 
 ## Compatibility
 
-Tested with dnd5e, might work on other systems as well though.
-
-Super Charged by:
-
-- [Item Effects to Chat D&D5e](https://github.com/ElfFriend-DnD/foundryvtt-item-effects-to-chat-5e)
-
 Compatible with:
-- DF Convienent Effects (Ignore the libwrapper warning, it's working fine).
+- Core 5e Roller
+- Minimal Rolling Enhancements
+
+Super Charges:
+- [Auto Roll NPC Save D&D5e](https://github.com/ElfFriend-DnD/foundryvtt-auto-roll-npc-save-5e)
+- [Items with Rollable Tables DnD5e](https://github.com/ElfFriend-DnD/foundryvtt-items-with-rolltables-5e)
+- [Attack Roll Check D&D5e](https://github.com/ElfFriend-DnD/foundryvtt-attack-roll-check-5e)
+- [Item Effects to Chat D&D5e](https://github.com/ElfFriend-DnD/foundryvtt-item-effects-to-chat-5e)
 
 Uncertain Compatiblity with:
 
-- Any system that isn't dnd5e. The core concept should be system-agnostic but there might be details missing.
-
+- Any alternative rolling module other than Minimal Rolling Enhancements, these typically have their own takes on what a 'compact' layout for chat cards is, use that instead of this.

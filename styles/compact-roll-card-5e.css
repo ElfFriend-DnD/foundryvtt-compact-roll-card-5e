@@ -103,6 +103,10 @@
   display: none;
 }
 
+.compact-roll-card-5e-collapse-up .whisper-to {
+  display: none;
+}
+
 .compact-roll-card-5e-collapse-up .message-header .flavor-text {
   flex: 1 1 auto;
 }

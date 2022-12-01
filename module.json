@@ -1,5 +1,5 @@
 {
-  "name": "compact-roll-card-5e",
+  "id": "compact-roll-card-5e",
   "title": "Compact Roll Card DnD5e",
   "description": "A module that makes it easy to disable or delete temporary effects.",
   "version": "1.0.1",
@@ -19,8 +19,9 @@
   "styles": [
     "./styles/compact-roll-card-5e.css"
   ],
-  "minimumCoreVersion": "0.8.9",
-  "compatibleCoreVersion": "9",
+  "compatibility": {
+      "minimum": 10
+  },
   "url": "https://github.com/ElfFriend-DnD/foundryvtt-compact-roll-card-5e",
   "bugs": "https://github.com/ElfFriend-DnD/foundryvtt-compact-roll-card-5e/issues",
   "changelog": "https://github.com/ElfFriend-DnD/foundryvtt-compact-roll-card-5e/releases",
@@ -29,6 +30,6 @@
   "license": "https://github.com/ElfFriend-DnD/foundryvtt-compact-roll-card-5e/raw/main/LICENSE",
   "readme": "https://github.com/ElfFriend-DnD/foundryvtt-compact-roll-card-5e/raw/main/README.md",
   "flags": {
-    "allowBugReporter": true
+      "allowBugReporter": true
   }
 }

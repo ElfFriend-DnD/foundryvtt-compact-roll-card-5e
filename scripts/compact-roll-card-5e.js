@@ -26,12 +26,12 @@ Hooks.on('renderChatMessage', async (chatMessage, html) => {
     return;
   }
 
-  if (chatMessage.data.timestamp - previousChatMessage.data.timestamp > 300) {
+  if (chatMessage.timestamp - previousChatMessage.timestamp > 300) {
     return;
   }
 
-  const speakerToken = chatMessage.data.speaker.token;
-  const prevSpeakerToken = previousChatMessage.data.speaker.token;
+  const speakerToken = chatMessage.speaker.token;
+  const prevSpeakerToken = previousChatMessage.speaker.token;
 
   if (speakerToken && prevSpeakerToken && speakerToken === prevSpeakerToken) {
     // these are definitely from the same character
@@ -39,8 +39,8 @@ Hooks.on('renderChatMessage', async (chatMessage, html) => {
     return;
   }
 
-  const speakerActor = chatMessage.data.speaker.actor;
-  const prevSpeakerActor = previousChatMessage.data.speaker.actor;
+  const speakerActor = chatMessage.speaker.actor;
+  const prevSpeakerActor = previousChatMessage.speaker.actor;
 
   if (speakerActor && prevSpeakerActor && speakerActor === prevSpeakerActor) {
     // these are probably from the same character
